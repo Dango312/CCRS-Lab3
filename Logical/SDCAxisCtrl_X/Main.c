@@ -10,17 +10,16 @@ void Homing(void);
 
 void _INIT ProgramInit(void)
 {
-	//������������� ���� SDC �������
+	
 	AxisX_HW.EncIf1_Typ = ncSDC_ENC16;
 	AxisX_HW.DiDoIf_Typ = ncSDC_DIDO;
 	AxisX_HW.DrvIf_Typ = ncSDC_DRVSERVO16;
 	
-	//������������� ����� ����������
 	strcpy(AxisX_HW.EncIf1_Name, "AxisX_EncIf");
 	strcpy(AxisX_HW.DrvIf_Name, "AxisX_DrvIf");
 	strcpy(AxisX_HW.DiDoIf_Name, "AxisX_DiDoIf");
 		
-	//������������� ����� ���������� � ���������� ������
+
 	AxisX_EncIf.iEncOK = 1;
 	AxisX_DrvIf.iDrvOK = 1;
 	AxisX_DrvIf.iStatusEnable = 1;
